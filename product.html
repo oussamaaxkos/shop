@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Page</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+  
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+.logo{
+
+
+  max-width: 100px;
+
+
+}
+
+
+
+
+/*header*/
+#header{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #E3E6E3;
+  box-shadow: 0 5px  15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top:0;
+  left: 0;
+  
+}
+
+#navbar{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+
+#navbar li{
+
+list-style: none;
+padding:  0 20px;
+position: relative;
+
+}
+#navbar li a{
+
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+
+}
+#navbar li a:hover,
+#navbar li a.active {
+
+  color: #088178;
+}
+
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+
+  content :"";
+  width : 30px;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left:20px;
+
+}
+
+#hero{
+  background-image: url("") ;
+}
+
+/*home*/
+#hero{
+  
+  background-image: url("static/images/background/b4.jpg") ;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding:  0 80px ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+#hero h4{
+  padding-bottom: 15px;
+}
+
+#hero h4{
+  color: #088178 ;
+}
+#hero button{
+
+  background-image: url("static/images/icons/button.png");
+  background-color: transparent;
+  color: 088178;
+  border: 0;
+  padding: 14px 80px 14px 65px ;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700px;
+  font-size :15px;
+
+}
+
+/* Shop Page */
+
+#page-header{
+  
+  background-image: url("static/images/background/b1.jpg") ;
+  width:  100%;
+  height : 40vh;
+  background-size: cover ;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: column;
+  padding : 14px;
+}
+
+#page-header h2 ,
+#page-header p{
+
+  color: #fff;
+
+}
+
+#product1{
+
+  text-align: center ;
+
+}
+
+#product1 .pro{
+
+  width : 23%;
+  min-width: 250px;
+  padding : 10px 12px ;
+  border : 1px solid #cce7d0;  
+  border-radius: 25px;
+  cursor:  pointer;
+  box-shadow: 20px 20px 30px  rgba(0,0,0,0.02);
+  margin : 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+
+#product1 .pro:hover{
+ 
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+  
+}
+#product1 .pro  .des{
+
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro des span{
+
+   color : #606063;
+   font-size:  12px;
+
+}
+
+#product1 .pro img{
+
+  width : 100%;
+  border-radius:20px;
+
+}
+
+#product1 .pro .des h5{
+
+  padding-top: 7px;
+  color : #1a1a1a;
+  font-size: 14px;
+
+}
+
+
+#product1 .pro .des i{
+
+  font-size: 12px;
+  color: rgba(243 , 181 , 25);
+
+}
+
+#product1 .pro .des h4{
+   
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+
+}
+
+#product1{
+
+   text-align: center;  
+
+}
+
+#product1 .pro-container{
+
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+
+
+}
+
+#product1 .pro .cart{
+  
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: 500;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom : 20px;
+  right : 10px;
+
+}
+
+#pagination{
+
+  text-align: center;
+
+}
+#pagination a{
+
+
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px ;
+  border-radius : 4px;
+  font-weight: 600;
+
+}
+#pagination a i {
+
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+
+
+#sm-banner{
+
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+
+}
+
+
+#sm-banner .banner-box{
+
+  display: flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("static/images/background/b17.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+
+
+}
+
+#sm-banner .banner-box2{
+
+  display: flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("static/images/background/b16.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+
+
+}
+
+
+
+#sm-banner h4{
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+
+}
+
+
+#sm-banner h2{
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800px;
+
+}
+
+
+#sm-banner span{
+
+  color: #fff;
+  font-size:14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+
+}
+
+/* singlle product */
+
+#prodetails{
+
+    display: flex;
+    margin: 20px;
+
+}
+
+#prodetails .single-pro-details{
+
+
+
+    width: 50%;
+    padding-top: 30px;
+
+
+}
+
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+
+
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+
+}
+
+
+#prodetails .single-pro-details select{
+    
+    display: flex;
+    padding: 5ppx 10px;
+    margin-bottom: 10px;
+    height: 35px;    
+
+
+}
+
+
+
+#prodetails .single-pro-details select:focus{
+
+    outline: none;
+   
+
+}
+
+
+#prodetails .single-pro-details input{
+
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10ppx;
+ 
+}
+
+#prodetails .single-pro-details button{
+     
+    width: 200px;
+    height: 45px;
+    background: #088178;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#prodetails .single-pro-details span{
+
+   line-height: 25px;
+
+}
+
+#prodetails .single-pro-details input:focus{
+
+    outline: none;
+    
+}
+
+
+
+
+#prodetails .single-pro-image{
+
+    width: 40%;
+    margin-right: 50px;
+    
+}
+
+.small-img-group{
+
+
+    display: flex;
+    justify-content: space-between;
+
+}
+.small-img-col{
+    flex-basis: 24% ;
+    cursor: pointer;
+}
+
+
+#product1 h1{
+
+    justify-content: center;
+    font-size: 40px;
+
+}
+
+.learnMoreButton{
+  width: 200px;
+  height: 45px;
+  background: white;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: ease 0.3s;
+
+}
+
+.learnMoreButton:hover{
+
+  background-color: #088178;
+
+
+}
+
+</style>
+
+</head>
+<body>
+ 
+
+
+    <section id="header">
+
+        <a href="#"><img src="static/images/icons/logo.png" class="logo" alt=""></a>
+
+
+        <div>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">Shope</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-regular fa-bag-shopping"></i></a></li>
+          </ul>
+        </div>
+  </section>
+
+<section  id="prodetails" class="section-p1">
+  <div class="single-pro-image">
+        <img src="static/images/clothes/Trico/f1.jpg" width="100%" id="MainImg" alt="">
+    
+        <div class="small-img-group">
+            <div class="small-img-col">
+                <img src="static/images/clothes/Trico/f5.jpg" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="static/images/clothes/Trico/f2.jpg" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="static/images/clothes/Trico/f3.jpg" width="100%" class="small-img" alt="">
+            </div>
+            <div class="small-img-col">
+                <img src="static/images/clothes/Trico/f4.jpg" width="100%" class="small-img" alt="">
+            </div>
+        </div>
+    </div>
+  
+    <div class="single-pro-details">
+
+        <h6>Hoome/T-Shirt</h6>
+        <h4>Men's Fashion T Shirt</h4>
+        <h2>139.00DH</h2>
+       
+        <select name="" id="">
+           
+            <option value="">Select Size</option>
+            <option value="">XL</option>
+            <option value="">XXL</option>
+            <option value="">Small</option>
+            <option value="">Large</option>
+        </select>
+
+        <input type="number" value="1">
+        <button  class="normal">Add to cart</button>
+        <h4>Product Details</h4>
+        
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa nulla in veritatis unde quas, illo consequuntur distinctio, autem fugiat nesciunt, 
+            esse mollitia dolore aut tempora necessitatibus blanditiis veniam nihil.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Voluptate veritatis veniam laborum ipsa quis, facilis ad eos voluptas id cupiditate at voluptatum nobis illo quas animi ratione quasi vitae sapiente?
+        </span>
+    </div>
+  </section>
+
+
+
+<!-- ......features ..................................... -->
+
+
+
+<section id="product1" class="section-p1">
+    
+    <h1>Featured Products</h1>
+    
+    
+    <div class="pro-container">
+      <div class="pro">
+        <img src="static/images/clothes/Trico/f1.jpg" alt="">
+        <div class="des">
+          <span>adidas</span>
+          <h5>Cartoon Astronaut T-Shirts</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="static/images/clothes/Trico/n5.jpg" alt="">
+        <div class="des">
+          <span>adidas</span>
+          <h5>Cartoon Astronaut T-Shirts</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+      <div class="pro">
+        <img src="static/images/clothes/Trico/n7.jpg" alt="">
+        <div class="des">
+          <span>adidas</span>
+          <h5>Cartoon Astronaut T-Shirts</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+    
+      <div class="pro">
+        <img src="static/images/clothes/Trico/f2.jpg" alt="">
+        <div class="des">
+          <span>adidas</span>
+          <h5>Cartoon Astronaut T-Shirts</h5>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h4>$78</h4>
+        </div>
+        <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+      </div>
+    </div>
+    </section>
+
+
+    </div>
+
+  
+  <section id="page-header">
+
+    <h2>#Stay Home</h2>
+    <p>Savemore with coupons & up to 70% off!</p>
+
+    <!-- <button id="button">Shop now</button> -->
+
+  </section>
+
+  <section id="newslatter" class="section-p1 section-m1"></section>
+ 
+  <section id="sm-banner" class="section-p1">
+    <div class="banner-box">
+        <h4>deals</h4>
+        <h2>Buy 3 get 1 free</h2>
+        <span>The best classic dress </span>
+        <button class="learnMoreButton">Learn More</button>
+    </div>
+
+    <div class="banner-box2">
+      <h4>deals</h4>
+      <h2>Buy 3 get 1 free</h2>
+      <span>The best classic dress </span>
+      <button class="learnMoreButton">Learn More</button>
+    </div>
+
+  
+
+  </section>
+
+
+  
+   
+
+    <script>
+
+       
+        let MainImage = document.getElementById("MainImg")
+        let smallimage = document.getElementsByClassName("small-img")
+
+        for(let i = 0 ; i<4 ; i++){
+
+
+            smallimage[i].onclick = function(){
+
+                MainImage.src = smallimage[i].src;
+    
+            }
+
+        }
+         
+
+
+    </script>
+</body>
+
+
+</html>
